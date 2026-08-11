@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>AI导航 - AI好站 | AI导航 - 发现全球优质AI工具与资源</title>
+<link rel="icon" type="image/png" href="/icons/logo-img.png">
+<meta name="description" content="AI导航(AI.txdd.cn)是专业的AI导航与AI好站平台，收录ChatGPT、DeepSeek、Midjourney、Cursor、Claude、Kimi等数百款优质AI产品，20+精细分类，助您快速发现最适合的AI工具。">
+<meta name="keywords" content="AI导航, AI好站, AI工具, AI工具导航, AI网站导航, AI导航, ChatGPT, DeepSeek, Midjourney, Cursor, Claude, Kimi, AI对话, AI绘画, AI编程, AI视频, AI写作, AI音乐, AI设计, AIGC, 大模型">
+<meta name="robots" content="index, follow">
+<meta name="author" content="AI导航">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://AI.txdd.cn">
+<meta property="og:title" content="AI导航 - 发现全球优质AI工具与资源">
+<meta property="og:description" content="专业AI工具导航平台，收录ChatGPT、DeepSeek、Midjourney等数百款AI产品，20+精细分类，助你探索人工智能的无限可能。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://AI.txdd.cn">
+<meta property="og:site_name" content="AI导航">
+<meta property="og:image" content="https://AI.txdd.cn/icons/logo-img.png">
+<meta property="og:image:width" content="200">
+<meta property="og:image:height" content="48">
+<meta property="og:image:alt" content="AI导航 Logo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI导航 - 发现全球优质AI工具">
+<meta name="twitter:description" content="专业AI工具导航平台，收录数百款优质AI产品，覆盖AI对话、绘画、编程等20+分类。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "AI导航",
+  "url": "https://AI.txdd.cn",
+  "alternateName": "AI导航·AI工具导航",
+  "description": "专业AI工具导航平台，收录全球优质人工智能产品",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://AI.txdd.cn/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<style>/* Critical CSS — inline for instant first paint */
+/*
+ * Critical CSS — 首屏布局核心样式（内联用）
+ * 只包含 layout-defining rules，排除 hover/transition/animation/modal
+ * 约 4KB 内联到 <head>，确保 FCP 时布局就正确
+ */
+:root {
+  --primary: #5b4af5; --primary-dark: #4338ca; --primary-light: #ede9fe;
+  --primary-soft: #f5f3ff; --accent: #ec4899; --text: #1e1e2e;
+  --text-secondary: #555; --text-muted: #999; --bg: #f8f9fb;
+  --card-bg: #fff; --border: #e8eaee; --border-light: #f0f1f3;
+  --shadow: 0 1px 3px rgba(0,0,0,.04); --shadow-md: 0 4px 12px rgba(0,0,0,.06);
+  --shadow-lg: 0 8px 30px rgba(0,0,0,.08);
+  --radius: 14px; --radius-sm: 8px; --radius-lg: 18px; --radius-pill: 100px;
+  --transition: .2s ease; --sidebar-width: 220px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+  font-size:14px;color:var(--text);background:#f5f6fa;line-height:1.6;
+  -webkit-font-smoothing:antialiased;min-height:100vh;
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none}
+input{font:inherit;border:none;outline:none}
+img{display:block;max-width:100%}
+
+/* Sidebar */
+.sidebar{
+  position:fixed;top:60px;left:0;bottom:0;
+  width:var(--sidebar-width);background:#fff;
+  border-right:1px solid var(--border-light);z-index:100;
+  display:flex;flex-direction:column;overflow-y:auto;
+}
+.sidebar-nav{flex:1;padding:12px 0 8px}
+.sidebar-link{
+  display:flex;align-items:center;gap:8px;padding:9px 20px;
+  font-size:13.5px;color:var(--text-secondary);width:100%;text-align:left;
+  border-left:3px solid transparent;
+}
+.sidebar-link.active{
+  background:var(--primary-soft);color:var(--primary);font-weight:600;
+  border-left-color:var(--primary);
+}
+.sidebar-link .sidebar-badge{
+  margin-left:auto;font-size:11px;color:var(--text-muted);
+  background:#f3f4f6;padding:1px 8px;border-radius:10px;font-weight:500;
+}
+.sidebar-link.active .sidebar-badge{background:var(--primary-light);color:var(--primary-dark)}
+.sidebar-footer{
+  padding:14px 20px;font-size:12px;color:var(--text-muted);
+  border-top:1px solid var(--border-light);text-align:center;flex-shrink:0;
+}
+
+/* Main Wrapper */
+.main-wrapper{
+  flex:1;margin-left:var(--sidebar-width);
+  display:flex;flex-direction:column;min-height:100vh;
+}
+
+/* Header */
+.header{
+  position:sticky;top:0;z-index:200;
+  background:rgba(255,255,255,.85);backdrop-filter:blur(18px) saturate(180%);
+  -webkit-backdrop-filter:blur(18px) saturate(180%);
+  /* border-bottom:1px solid rgba(0,0,0,.06); */box-shadow:0 1px 8px rgba(0,0,0,.04);
+}
+.header-inner{
+  padding:0 28px;height:60px;display:flex;align-items:center;gap:8px;
+  max-width:1500px;margin:0 auto;
+}
+.sidebar-toggle{
+  display:none;width:36px;height:36px;align-items:center;justify-content:center;
+  border-radius:8px;color:var(--text-secondary);flex-shrink:0;margin-right:2px;
+}
+.header-logo{display:flex;align-items:center;gap:10px;margin-right:32px;flex-shrink:0}
+.header-logo-svg{height:40px;flex-shrink:0;object-fit:contain;width:auto}
+.header-logo-text{
+  font-size:17px;font-weight:700;
+  background:linear-gradient(135deg,var(--primary),var(--accent));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.header-logo-domain{font-size:11px;color:var(--text-muted);margin-left:-4px;margin-top:2px;align-self:flex-end;padding-bottom:2px}
+.header-nav{display:flex;gap:2px;flex-wrap:wrap}
+.header-nav a{padding:6px 15px;border-radius:8px;font-size:13.5px;color:var(--text-secondary);white-space:nowrap}
+.header-nav a.active{background:var(--primary-soft);color:var(--primary);font-weight:600}
+.header-actions{margin-left:auto;display:flex;align-items:center;gap:10px;flex-shrink:0}
+.header-btn{padding:7px 18px;border-radius:8px;font-size:13px;font-weight:600;white-space:nowrap}
+.header-submit{background:var(--primary);color:#fff}
+
+/* Hero */
+.hero{
+  position:relative;min-height:320px;display:flex;align-items:center;justify-content:center;
+  overflow:hidden;background:linear-gradient(160deg,#0a0e27 0%,#12133d 30%,#1a1040 60%,#0f1a35 100%);
+}
+.hero-inner{position:relative;z-index:2;text-align:center;max-width:700px;padding:40px 28px 44px}
+.hero-title{font-size:42px;font-weight:800;color:#fff;letter-spacing:-1px;line-height:1.2;margin-bottom:10px}
+.hero-title-accent{
+  background:linear-gradient(135deg,#818cf8 0%,#c084fc 40%,#f472b6 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.hero-subtitle{font-size:15px;color:rgba(255,255,255,.5);margin-bottom:32px}
+
+/* Search */
+.search-card{max-width:620px;margin:0 auto;padding:0}
+.search-tabs{display:flex;justify-content:center;gap:4px;margin-bottom:14px}
+.search-tab{
+  padding:6px 18px;border-radius:var(--radius-pill);font-size:12.5px;
+  color:rgba(255,255,255,.5);background:transparent;
+}
+.search-tab.active{background:rgba(99,102,241,.35);color:#fff;font-weight:600}
+.search-box{position:relative}
+.search-box input{
+  width:100%;height:52px;padding:0 54px 0 46px;border-radius:14px;
+  border:1.5px solid rgba(255,255,255,.15);background:rgba(255,255,255,.08);
+  font-size:14.5px;color:#fff;
+}
+.search-box input::placeholder{color:rgba(255,255,255,.35)}
+.search-box-icon{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:rgba(255,255,255,.35);pointer-events:none}
+.search-btn{
+  position:absolute;right:5px;top:5px;width:42px;height:42px;border-radius:12px;
+  background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+}
+.hot-tags{margin-top:18px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:7px}
+.hot-tag{
+  padding:5px 15px;border-radius:var(--radius-pill);font-size:12.5px;font-weight:500;
+  color:rgba(255,255,255,.6);background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.06);
+}
+
+/* Content */
+.main{flex:1;max-width:1400px;width:100%;margin:0 auto;padding:28px 28px 48px}
+
+/* Category */
+.category-section{margin-bottom:36px;padding:0}
+.category-section[style*="display:none"]{display:none!important}
+.cat-header{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--border-light)}
+.cat-icon-box{
+  width:28px;height:28px;border-radius:var(--radius-sm);background:var(--primary-soft);
+  display:flex;align-items:center;justify-content:center;font-size:14px;
+}
+.cat-name{font-size:17px;font-weight:700;color:var(--text)}
+.cat-count{font-size:12px;font-weight:500;color:var(--text-muted);margin-left:auto}
+
+/* Links Grid */
+.links-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+
+/* Link Card (layout only) */
+.link-card{
+  display:flex;align-items:flex-start;gap:12px;padding:16px 14px;
+  background:var(--card-bg);border-radius:10px;border:none;position:relative;overflow:hidden;
+}
+.link-logo,.link-logo-link{
+  flex-shrink:0;width:44px;height:44px;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
+  font-size:16px;font-weight:700;color:#fff;box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.link-logo-link{cursor:pointer}
+.link-logo img,.link-logo-link img{width:100%;height:100%;object-fit:contain;padding:3px;background:#fff;border-radius:10px}
+.link-logo .logo-text,.link-logo-link .logo-text{line-height:1;font-size:15px}
+.link-body{flex:1;min-width:0}
+.link-name{font-size:14px;font-weight:600;color:var(--text);margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.link-desc{font-size:12px;color:var(--text-muted);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:8px}
+.link-badges{display:flex;flex-wrap:wrap;gap:4px}
+
+/* Badge */
+.badge{
+  display:inline-block;padding:2px 8px;border-radius:var(--radius-pill);
+  font-size:10.5px;font-weight:600;line-height:1.6;letter-spacing:.3px;
+  border:1px solid transparent;text-transform:uppercase;
+}
+.badge-hot{background:#fef2f2;color:#dc2626;border-color:#fecaca}
+.badge-rec{background:#eff6ff;color:#2563eb;border-color:#bfdbfe}
+.badge-cn{background:#f0fdf4;color:#16a34a;border-color:#bbf7d0}
+.badge-en{background:#fefce8;color:#ca8a04;border-color:#fde68a}
+.badge-new{background:#fdf2f8;color:#db2777;border-color:#fbcfe8}
+
+/* Footer */
+.footer{background:var(--card-bg);/* border-top:1px solid var(--border-light); */padding:28px;margin-top:auto}
+.footer-inner{max-width:1300px;margin:0 auto;text-align:center;font-size:13px;color:var(--text-muted)}
+.footer-inner strong{color:var(--primary)}
+.footer-desc{font-size:12px;color:var(--text-muted);margin-bottom:10px}
+.footer-links{display:flex;gap:20px;justify-content:center;margin-top:6px;flex-wrap:wrap;align-items:center}
+.footer-links a{color:var(--text-secondary);font-size:13px}
+
+/* Scroll top */
+.scroll-top{
+  position:fixed;bottom:32px;right:32px;z-index:99;
+  width:44px;height:44px;border-radius:50%;
+  background:var(--card-bg);box-shadow:var(--shadow-md);
+  color:var(--text-secondary);display:flex;align-items:center;justify-content:center;
+}
+
+/* Sidebar Overlay */
+.sidebar-overlay{
+  display:none;position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:190;
+}
+.sidebar-overlay.show{display:block}
+
+/* Submit button */
+.submit-site-btn{
+  display:block;width:100%;margin-top:10px;padding:8px 0;
+  background:var(--primary);color:#fff;border-radius:8px;font-size:13px;font-weight:600;
+}
+
+/* Language switcher */
+.lang-switcher{position:relative}
+.lang-switch-btn{
+  display:inline-flex;align-items:center;gap:6px;background:transparent;
+  border:1px solid var(--border-light);border-radius:8px;
+  padding:5px 10px 5px 8px;font-size:13px;color:#1d1d1f;cursor:pointer;
+}
+.lang-globe{width:16px;height:16px;flex-shrink:0;color:var(--text-secondary)}
+.lang-switch-label{line-height:1}
+.lang-arrow{width:12px;height:12px;flex-shrink:0;color:var(--text-muted)}
+.lang-dropdown{
+  display:none;position:absolute;top:100%;right:0;margin-top:6px;
+  min-width:120px;background:var(--card-bg);border:1px solid var(--border-light);
+  border-radius:8px;box-shadow:var(--shadow-md);z-index:200;padding:4px 0;
+  list-style:none;
+}
+.lang-switcher.open .lang-dropdown{display:block}
+.lang-option{
+  padding:7px 14px;font-size:13px;color:#1d1d1f;
+  cursor:pointer;white-space:nowrap;
+}
+.lang-option.active{color:var(--primary);font-weight:600;background:rgba(91,74,245,.06)}
+.lang-current-label{font-size:13px;color:var(--text-secondary);cursor:pointer;padding:6px 10px;border-radius:6px}
+
+/* Footer language switcher — dropdown goes upward */
+.footer .lang-dropdown{bottom:100%;top:auto;margin-top:0;margin-bottom:6px}
+.footer .lang-switch-btn{font-size:12px;padding:4px 8px 4px 6px}
+.footer .lang-globe{width:14px;height:14px}
+.footer .lang-arrow{width:10px;height:10px}
+
+/* Responsive — grid columns only */
+@media(max-width:1000px){
+  .links-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:900px){
+  .sidebar-toggle{display:flex}
+  .sidebar{top:0;z-index:300;transform:translateX(-100%)}
+  .sidebar.open{transform:translateX(0)}
+  .main-wrapper{margin-left:0}
+  .header-logo{margin-right:auto}
+  .header-nav{display:none}
+  .header-actions{display:none}
+  .header-inner{padding:0 14px;height:52px}
+}
+@media(max-width:640px){
+  .links-grid{grid-template-columns:repeat(2,1fr);gap:8px}
+  .link-card{padding:10px 10px;gap:8px}
+  .link-logo{width:36px;height:36px;border-radius:8px}
+  .link-name{font-size:13px}
+  .link-desc{font-size:11px;-webkit-line-clamp:1}
+  .badge{font-size:9.5px;padding:1px 6px}
+}
+@media(max-width:600px){
+  .hero{min-height:280px}
+  .hero-inner{padding:24px 14px}
+  .hero-title{font-size:24px}
+  .hero-subtitle{font-size:12px;margin-bottom:18px}
+  .search-box input{height:42px;font-size:13px;padding:0 42px 0 36px;border-radius:10px}
+  .search-btn{width:34px;height:34px;top:4px;right:4px;border-radius:8px}
+  .search-btn svg{width:16px;height:16px}
+  .search-box-icon{left:10px;width:14px;height:14px}
+  .search-tab{padding:4px 10px;font-size:11px}
+  .hot-tag{padding:3px 9px;font-size:11.5px}
+  .sidebar-link{padding:8px 14px;font-size:13px}
+  .header-logo-svg{height:28px}
+  .footer{padding:20px 16px}
+  .header-inner{height:48px}
+}
+
+/* ========== Skeleton Screen ========== */
+@keyframes sk-shimmer{
+  0%{background-position:-400px 0}
+  100%{background-position:400px 0}
+}
+.sk-section{margin-bottom:36px}
+.sk-cat-header{
+  display:flex;align-items:center;gap:10px;
+  margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--border-light);
+}
+.sk-block{
+  border-radius:6px;
+  background:linear-gradient(90deg,#ececec 25%,#f5f5f5 50%,#ececec 75%);
+  background-size:800px 100%;
+  animation:sk-shimmer 1.4s infinite linear;
+}
+.sk-cat-icon{width:28px;height:28px;border-radius:8px}
+.sk-cat-title{height:18px;width:100px}
+.sk-cat-count{height:14px;width:40px;margin-left:auto}
+.sk-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.sk-card{
+  background:#fff;border-radius:10px;padding:16px 14px;
+  display:flex;align-items:flex-start;gap:12px;
+}
+.sk-logo{flex-shrink:0;width:44px;height:44px;border-radius:10px}
+.sk-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:6px}
+.sk-name{height:14px;width:70%}
+.sk-desc{height:11px;width:100%}
+.sk-desc2{height:11px;width:60%}
+@media(max-width:1000px){.sk-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:640px){.sk-grid{grid-template-columns:repeat(2,1fr);gap:8px}.sk-card{padding:10px}}
+
+</style>
+<link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+<noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+<link rel="preload" href="/js/i18n.js" as="script">
+<link rel="preload" href="/js/main.js" as="script">
+<link rel="dns-prefetch" href="//hm.baidu.com">
+<link rel="preconnect" href="https://hm.baidu.com" crossorigin>
+<link rel="dns-prefetch" href="//www.googletagmanager.com">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"即梦","url":"https://jimeng.jianying.com/ai-tool/home","description":"人人都能用的全能AI创意神器，一句话出好作品"},
+    {"@type":"ListItem","position":2,"name":"扣子","url":"https://www.coze.cn/overview","description":"月活超200万，700+插件，专业AI Agent零门槛创建"},
+    {"@type":"ListItem","position":3,"name":"Skills.sh","url":"https://skills.sh/","description":"7万+技能实时热度榜，支持一键安装"},
+    {"@type":"ListItem","position":4,"name":"Nano Banana","url":"https://aistudio.google.com/","description":"最具人气的谷歌AI生图神器，史上最会画画的聪明香蕉"},
+    {"@type":"ListItem","position":5,"name":"Gemini","url":"https://gemini.google.com/app","description":"谷歌旗舰多模态AI，音视频文档全能处理"},
+    {"@type":"ListItem","position":6,"name":"Snack Prompt","url":"https://snackprompt.com/","description":"AI界Reddit！10万+优质提示词随取随用"},
+    {"@type":"ListItem","position":7,"name":"Booltool","url":"https://booltool.boolv.tech/home","description":"多合一AI图像处理网站，快速进行编辑修整"},
+    {"@type":"ListItem","position":8,"name":"Creatie.ai","url":"https://creatie.ai/","description":"一键即出UI作品，绝美界面惊艳全场"},
+    {"@type":"ListItem","position":9,"name":"Huemint","url":"https://huemint.com/brand-intersection/","description":"用AI自定义和谐配色"},
+    {"@type":"ListItem","position":10,"name":"字语未来","url":"https://getgetai.com/workstation","description":"用AI创造更有价值的信息，定义新一代智能办公平台"},
+    {"@type":"ListItem","position":11,"name":"Stable Audio","url":"https://www.stableaudio.com/","description":"Stability AI最新推出的音乐生成工具"},
+    {"@type":"ListItem","position":12,"name":"Text to Skybox","url":"https://skybox.blockadelabs.com/","description":"AI生成360°无缝环境贴图"},
+    {"@type":"ListItem","position":13,"name":"Udacity AI学院","url":"https://www.udacity.com","description":"Udacity推出的School of AI，从入门到高级"},
+    {"@type":"ListItem","position":14,"name":"Tome","url":"https://tome.app/","description":"先进的AI智能PPT制作工具"},
+    {"@type":"ListItem","position":15,"name":"Deepl翻译器","url":"https://www.deepl.com/translator","description":"集合深度学习、神经网络等先进技术的新一代AI翻译神器"},
+    {"@type":"ListItem","position":16,"name":"GitHub Copilot","url":"https://github.com/features/copilot","description":"GitHub AI编程工具"},
+    {"@type":"ListItem","position":17,"name":"中科院","url":"http://www.ia.cas.cn/","description":"国家最高学术机构"},
+    {"@type":"ListItem","position":18,"name":"Simon的白日梦","url":"https://weibo.com/u/1948301550","description":"AI/建筑/艺术跨领域研究者，互联网科技博主"},
+    {"@type":"ListItem","position":19,"name":"Powerfulai","url":"https://www.powerfulai.tools/","description":"每天更新，全球最大的人工智能工具目录"},
+    {"@type":"ListItem","position":20,"name":"龙虾论坛","url":"https://longxia.com/","description":"龙虾爱好者社区，分享龙虾知识与趣闻"},
+    {"@type":"ListItem","position":21,"name":"AIHub","url":"https://aihub.cn","description":"中文AI工具综合导航站，汇总全球热门AI工具和网站，帮助用户快速找到适合的AI产品，提升工作效率和创作质量。"},
+    {"@type":"ListItem","position":22,"name":"Toolify.ai","url":"https://www.toolify.ai","description":"全球最大的AI工具目录之一，月访问量210万+，收录海量AI工具，每日自动更新，分类系统清晰，是发现新AI工具的首选平台。"},
+    {"@type":"ListItem","position":23,"name":"Futurepedia","url":"https://www.futurepedia.io","description":"海外知名AI工具目录，精选收录各类AI产品，支持按类别和功能筛选，是跟踪AI行业动态和新产品的重要入口。"},
+    {"@type":"ListItem","position":24,"name":"Theresanaiforthat","url":"https://theresanaiforthat.com","description":"全球最大的AI工具数据库之一，号称\"每个用途都有对应的AI\"，收录数万款AI工具，按使用场景精准分类。"},
+    {"@type":"ListItem","position":25,"name":"FutureTools","url":"https://www.futuretools.io","description":"知名AI博主Matt Wolfe创立的AI工具集合站，精选最前沿的AI工具和应用，每周更新，帮助用户第一时间发现新AI产品。"},
+    {"@type":"ListItem","position":26,"name":"AITOP100","url":"https://www.aitop100.cn","description":"国内大型AI导航平台，聚合全球超3000款AI工具，提供AIGC赛事、行业资讯和社区交流，专注AIGC应用场景。"},
+    {"@type":"ListItem","position":27,"name":"AIBase","url":"https://top.aibase.com","description":"收录超过2.2万款AI产品的导航平台，涵盖视频生成、图像处理等多个领域，每日持续更新，提供免费产品专区。"},
+    {"@type":"ListItem","position":28,"name":"AI神器大全","url":"https://aishenqi.net","description":"AI工具集合导航站，工具收录量大且更新快，分类清晰便于查找，突出免费和热门工具推荐，支持用户提交产品。"},
+    {"@type":"ListItem","position":29,"name":"豆包","url":"https://www.doubao.com/chat/","description":"国民AI工具！字节跳动自研全能AI助手，一句话全都能搞定"},
+    {"@type":"ListItem","position":30,"name":"Manus","url":"https://manus.im/app","description":"估值20亿爆表！Monica全球首款通用Agent"},
+    {"@type":"ListItem","position":31,"name":"Skillsmp","url":"https://skillsmp.com/","description":"聚合35万+开源技能，一站式Agent技能市场"},
+    {"@type":"ListItem","position":32,"name":"Flux.1","url":"https://www.uisdc.com/flux-1","description":"AI绘画新标杆，超强开源文生图模型"},
+    {"@type":"ListItem","position":33,"name":"文心一言","url":"https://yiyan.baidu.com/","description":"百度全新知识增强大语言模型！国产聊天机器人"},
+    {"@type":"ListItem","position":34,"name":"Midlibrary","url":"https://midlibrary.io/","description":"风格多样！实用超2000+MJ提示词资源"},
+    {"@type":"ListItem","position":35,"name":"Arc Lab","url":"https://arc.tencent.com/zh/ai-demos/faceRestoration","description":"腾讯出品的图片处理工具"},
+    {"@type":"ListItem","position":36,"name":"Stitch","url":"https://www.usegalileo.ai/","description":"AI生成可编辑的UI界面"},
+    {"@type":"ListItem","position":37,"name":"Looka","url":"https://looka.com/","description":"AI辅助logo和品牌设计"},
+    {"@type":"ListItem","position":38,"name":"Notion AI","url":"https://www.notion.so/product/ai","description":"AI写作神器！比你想得更多！写得更快"},
+    {"@type":"ListItem","position":39,"name":"Sora","url":"https://openai.com/sora","description":"碾压级更新！颠覆性的文生视频大模型"},
+    {"@type":"ListItem","position":40,"name":"Poly","url":"https://withpoly.com/browse/textures","description":"根据文本生成3D材质"},
+    {"@type":"ListItem","position":41,"name":"kaggle","url":"https://www.kaggle.com/","description":"机器学习和数据科学社区平台"},
+    {"@type":"ListItem","position":42,"name":"Glimmer Ai","url":"https://glimmerai.tech/","description":"基于GPT-3和DALL·E2的AI PPT知名工具"},
+    {"@type":"ListItem","position":43,"name":"必应翻译","url":"https://cn.bing.com/translator/","description":"内置微软自研的翻译词库，精准进行翻译"},
+    {"@type":"ListItem","position":44,"name":"Codeium","url":"https://codeium.com/","description":"超过40种语言的免费代码加速工具"},
+    {"@type":"ListItem","position":45,"name":"北大人工智能研究院","url":"http://www.ai.pku.edu.cn/","description":"中国最早开展人工智能研究的大学"},
+    {"@type":"ListItem","position":46,"name":"Simon_阿文","url":"https://weibo.com/u/1757693565","description":"微博知名AI研究大V，专注AI神器推荐"},
+    {"@type":"ListItem","position":47,"name":"Stackradar.co","url":"https://www.stackradar.co/","description":"互联网上最好的技术工具的精选"},
+    {"@type":"ListItem","position":48,"name":"AI导航","url":"https://hao.uisdc.com/ai/","description":"国内专业AI工具导航网站，热门AI工具每周更新"},
+    {"@type":"ListItem","position":49,"name":"Miora","url":"https://miora.design/","description":"An AI creative agent that remembers how you create. One brief in, a full set of on-brand visuals out: image, video, UI/UX, and 3D on one canvas."},
+    {"@type":"ListItem","position":50,"name":"LibTV","url":"https://www.liblib.tv/","description":"专业AI视频创作工具！从品牌TVC到国风动画，轻松产出创意作品"}
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- 侧边栏 -->
+<aside class="sidebar" id="sidebar">
+  <nav class="sidebar-nav" id="sidebarNav">
+    <button class="sidebar-link active" data-cat="all" data-i18n="sidebar.all_tools">📋 全部工具</button>
+  </nav>
+  
+</aside>
+
+<!-- 顶部通栏导航 -->
+<header class="header">
+  <div class="header-inner">
+    <button class="sidebar-toggle" id="sidebarToggle" data-i18n-title="header.toggle_sidebar" title="切换侧边栏">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M9 4v16"/></svg>
+    </button>
+    <a href="/" class="header-logo">
+      <img src="/icons/logo-img.png" alt="AI导航" class="header-logo-svg" height="40" fetchpriority="high">
+      <span class="header-logo-text" data-i18n="site.name">AI导航</span>
+    </a>
+    <nav class="header-nav" id="headerNav">
+            <a href="/">首页</a>
+      <a href="#cat-29">热门推荐</a>
+      <a href="#cat-30">龙虾与Agent</a>
+      <a href="#cat-32">AI绘画</a>
+      <a href="#cat-38">AI写作</a>
+      <a href="#cat-44">AI编程</a>
+      <a href="#cat-39">AI视频</a>
+      <a href="https://x.com/nangongyuan/" target="_blank" rel="noopener">南宫远推特</a>
+    </nav>
+    <div class="header-actions">
+      
+    </div>
+  </div>
+</header>
+
+<!-- 主体 -->
+<div class="main-wrapper">
+
+  <!-- 搜索 Hero -->
+  <section class="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    <div class="hero-inner">
+      <h1 class="hero-title"><span data-i18n="hero.title">AI导航</span><span class="hero-title-accent" data-i18n="hero.accent">· 发现全球优质AI工具</span></h1>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">最全AI工具体验平台，收录 ChatGPT / DeepSeek / Midjourney / Cursor 等数百款AI产品，一站式探索人工智能的无限可能</p>
+      <div class="search-card">
+        <div class="search-tabs" id="searchTabs">
+          <button class="search-tab active" data-engine="local" data-i18n="search.tab_local">🔍 站内</button>
+          <button class="search-tab" data-engine="baidu" data-i18n="search.tab_baidu">百度</button>
+          <button class="search-tab" data-engine="google" data-i18n="search.tab_google">Google</button>
+        </div>
+        <div class="search-box">
+          <svg class="search-box-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="text" id="searchInput" data-i18n-placeholder="search.placeholder" placeholder="搜索你想要的 AI 工具…" autocomplete="off">
+          <button class="search-btn" id="searchBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </button>
+        </div>
+        <div class="hot-tags" id="hotTags">
+          <button class="hot-tag" data-kw="ChatGPT">ChatGPT</button>
+          <button class="hot-tag" data-kw="DeepSeek">DeepSeek</button>
+          <button class="hot-tag" data-kw="Midjourney">Midjourney</button>
+          <button class="hot-tag" data-kw="Cursor">Cursor</button>
+          <button class="hot-tag" data-kw="Kimi">Kimi</button>
+          <button class="hot-tag" data-kw="Claude">Claude</button>
+          <button class="hot-tag" data-kw="即梦">即梦</button>
+          <button class="hot-tag" data-kw="豆包">豆包</button>
+          <button class="hot-tag" data-kw="AI绘画">AI绘画</button>
+          <button class="hot-tag" data-kw="AI写作">AI写作</button>
+          <button class="hot-tag" data-kw="AI视频">AI视频</button>
+          <button class="hot-tag" data-kw="AI编程">AI编程</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 主内容 -->
+  <main class="main" id="mainContent">
+    <div id="categoriesContainer">
+      <!-- Skeleton: 3 category sections, 5 cards each — replaced by JS after data loads -->
+      <div class="sk-section" aria-hidden="true">
+        <div class="sk-cat-header"><div class="sk-block sk-cat-icon"></div><div class="sk-block sk-cat-title"></div><div class="sk-block sk-cat-count"></div></div>
+        <div class="sk-grid">
+          <div class="sk-card"><div class="sk-block sk-logo"></div><div class="sk-body"><div class="sk-block sk-name"></div><div class="sk-block sk-desc"></div><div class="sk-block sk-desc2"></div></div></div>
+          <div class="sk-card"><div class="sk-block sk-logo"></div><div class="sk-body"><div class="sk-block sk-name"></div><div class="sk-block sk-desc"></div><div class="sk-block sk-desc2"></div></div></div>
+          <div class="sk-card"><div class="sk-block sk-logo"></div><div class="sk-body"><div class="sk-block sk-name"></div><div class="sk-block sk-desc"></div><div class="sk-block sk-desc2"></div></div></div>
+          <div class="sk-card"><div class="sk-block sk-logo"></div><div class="sk-body"><div class="sk-block sk-name"></div><div class="sk-block sk-desc"></div><div class="sk-block sk-desc2"></div></div></div>
+          <div class="sk-card"><div class="sk-block sk-logo"></div><div class="sk-body"><div class="sk-block sk-name"></div><div class="sk-block sk-desc"></div><div class="sk-block sk-desc2"></div></div></div>
+        </div>
+      </div>
+      <div class="sk-section" aria-hidden="true">
+        <div class="sk-cat-header"><div class="sk-block sk-cat-icon"></div><div class="sk-block sk-cat-title"></div><div class="sk-block sk-cat-count"></div></div>
+        <div class="sk-grid">
+          <div class="sk-card"><div class="sk-block sk-logo"></div><div class="sk-body"><div class="sk-block sk-name"></div><div class="sk-block sk-desc"></div><div class="sk-block sk-desc2"></div></div></div>
+          <div class="sk-card"><div class="sk-block sk-logo"></div><div class="sk-body"><div class="sk-block sk-name"></div><div class="sk-block sk-desc"></div><div class="sk-block sk-desc2"></div></div></div>
+          <div class="sk-card"><div class="sk-block sk-logo"></div><div class="sk-body"><div class="sk-block sk-name"></div><div class="sk-block sk-desc"></div><div class="sk-block sk-desc2"></div></div></div>
+          <div class="sk-card"><div class="sk-block sk-logo"></div><div class="sk-body"><div class="sk-block sk-name"></div><div class="sk-block sk-desc"></div><div class="sk-block sk-desc2"></div></div></div>
+          <div class="sk-card"><div class="sk-block sk-logo"></div><div class="sk-body"><div class="sk-block sk-name"></div><div class="sk-block sk-desc"></div><div class="sk-block sk-desc2"></div></div></div>
+        </div>
+      </div>
+      <div class="sk-section" aria-hidden="true">
+        <div class="sk-cat-header"><div class="sk-block sk-cat-icon"></div><div class="sk-block sk-cat-title"></div><div class="sk-block sk-cat-count"></div></div>
+        <div class="sk-grid">
+          <div class="sk-card"><div class="sk-block sk-logo"></div><div class="sk-body"><div class="sk-block sk-name"></div><div class="sk-block sk-desc"></div><div class="sk-block sk-desc2"></div></div></div>
+          <div class="sk-card"><div class="sk-block sk-logo"></div><div class="sk-body"><div class="sk-block sk-name"></div><div class="sk-block sk-desc"></div><div class="sk-block sk-desc2"></div></div></div>
+          <div class="sk-card"><div class="sk-block sk-logo"></div><div class="sk-body"><div class="sk-block sk-name"></div><div class="sk-block sk-desc"></div><div class="sk-block sk-desc2"></div></div></div>
+          <div class="sk-card"><div class="sk-block sk-logo"></div><div class="sk-body"><div class="sk-block sk-name"></div><div class="sk-block sk-desc"></div><div class="sk-block sk-desc2"></div></div></div>
+          <div class="sk-card"><div class="sk-block sk-logo"></div><div class="sk-body"><div class="sk-block sk-name"></div><div class="sk-block sk-desc"></div><div class="sk-block sk-desc2"></div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="search-panel" id="searchPanel" style="display:none">
+      <div class="search-panel-header" id="searchPanelHeader"></div>
+      <div class="links-grid" id="searchPanelGrid"></div>
+    </div>
+    <div class="no-result" id="noResult" style="display:none">
+      <span class="no-result-icon">🔍</span>
+      <p data-i18n="search.no_result">没有找到相关工具，试试其他关键词</p>
+    </div>
+  </main>
+
+  <!-- 页脚 -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="friend-links-container">
+      <h3 class="friend-links-title">🔗 友情链接</h3>
+      <div class="friend-links-grid">
+        <a href="https://btc.ngy123.com" target="_blank" rel="noopener" title="比特币导航站 - 搜索比特币导航、比特币资源">比特币导航站</a>
+        <a href="https://fabi.ngy123.com" target="_blank" rel="noopener" title="全球法币排行榜">全球法币排行榜</a>
+        <a href="https://eth.ngy123.com" target="_blank" rel="noopener" title="以太坊资源导航">以太坊资源导航</a>
+        <a href="https://gxs.ngy123.com" target="_blank" rel="noopener" title="高晓松资源下载">高晓松资源下载</a>
+        <a href="https://btczy.ngy123.com" target="_blank" rel="noopener" title="比特币资源下载站">比特币资源下载站</a>
+        <a href="https://binance.ngy123.com" target="_blank" rel="noopener" title="币安">币安</a>
+        <a href="https://okx.ngy123.com" target="_blank" rel="noopener" title="OKX">OKX</a>
+        <a href="https://tianya.ngy123.com" target="_blank" rel="noopener" title="天涯神贴分享站">天涯神贴分享站</a>
+        <a href="https://xuexi.ngy123.com" target="_blank" rel="noopener" title="中小学学习资源网">中小学学习资源网</a>
+        <a href="https://dy.ngy123.com" target="_blank" rel="noopener" title="电影资源站">电影资源站</a>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <p>© AI导航 - AI导航 | AI好站 | 发现全球优质AI工具与资源</p>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+
+
+<!-- 返回顶部 -->
+<button class="scroll-top" id="scrollTop" data-i18n-title="scroll.top" title="回到顶部">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+
+<script src="/js/i18n.js" defer></script>
+<script src="/js/desc-translations.js" defer></script>
+<script src="/js/main.js" defer></script>
+</body>
+</html>

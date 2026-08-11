@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+    <meta name="aplus-core" content="aplus.js">
+    <meta name="aplus-waiting" content="MAN">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    
+    
+    
+    
+	<title>达摩院</title>
+<meta name="keywords" content=", 达摩院, DAMO Academy" />
+<meta name="description"
+	content="阿里巴巴达摩院（Alibaba DAMO Academy for Discovery, Adventure, Momentum and Outlook）是一家致力于探索科技未知，以人类愿景为驱动力的，立足于基础科学、创新性技术和应用技术的研究院。" />
+<meta property="og:title" content="首页 - 达摩院" />
+<meta property="og:description"
+	content="阿里巴巴达摩院（Alibaba DAMO Academy for Discovery, Adventure, Momentum and Outlook）是一家致力于探索科技未知，以人类愿景为驱动力的，立足于基础科学、创新性技术和应用技术的研究院。" />
+<meta property="og:image" content="https://img.alicdn.com/imgextra/i4/O1CN01wB5AQ11QnfNGVnmnj_!!6000000002021-0-tps-300-300.jpg"/>
+
+
+	<link rel="icon" type="image/png" sizes="64x64"
+		href="https://img.alicdn.com/tfs/TB11wf2XwDqK1RjSZSyXXaxEVXa-64-64.png">
+	<link rel="stylesheet" href="//g.alicdn.com/damo-portal/damo-portal-fe/1.1.32/umi.css" />
+    <script>
+        (function(w, d, s, q) {
+            w[q] = w[q] || [];
+            var f = d.getElementsByTagName(s)[0],j = d.createElement(s);
+            j.async = true;
+            j.id = 'beacon-aplus';
+            j.setAttribute('exparams','userid=&aplus&sidx=aplusSidex&ckx=aplusCkx');
+            j.src = "//g.alicdn.com/alilog/mlog/aplus_v2.js";
+            j.crossorigin = 'anonymous';
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'aplus_queue');
+    </script>
+	<script>
+		window.routerBase = "/";
+	</script>
+	<script>
+      window.KOI_ENV_TAG = "prod";
+	</script>
+</head>
+
+<body>
+	<div id="damo-portal-fe"></div>
+
+	<script src="https://g.alicdn.com/??/AWSC/AWSC/awsc.js,/sd/baxia-entry/baxiaCommon.js"></script>
+    <script type="text/javascript" src="https://cn-shanghai-aliyun-cloudauth.oss-cn-shanghai.aliyuncs.com/web_sdk_js/jsvm_all.js"></script>
+    <script type="text/javascript" src="https://o.alicdn.com/captcha-frontend/aliyunCaptcha/AliyunCaptcha.js"></script>
+	<script src="//g.alicdn.com/damo-portal/damo-portal-fe/1.1.32/umi.js"></script>
+</body>
+
+</html>

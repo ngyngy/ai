@@ -1,0 +1,18 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 86" width="86" height="86">
+  <!-- Skillstore Logo: Elegant "S" letter -->
+  <!-- Outer circle background -->
+  <circle cx="43" cy="43" r="40" fill="#4338ca"/>
+
+  <!-- Inner white circle -->
+  <circle cx="43" cy="43" r="33" fill="white"/>
+
+  <!-- "S" letter shape - smooth curves -->
+  <!-- Top curve right -->
+  <path d="M 35 30 Q 50 30 50 38 Q 50 42 42 44" stroke="#4338ca" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Middle connecting curve -->
+  <path d="M 42 44 Q 36 46 36 48" stroke="#4338ca" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Bottom curve left -->
+  <path d="M 36 48 Q 36 56 51 56 Q 58 56 58 50" stroke="#4338ca" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

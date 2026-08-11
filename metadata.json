@@ -1,0 +1,6 @@
+{
+  "name": "AI导航",
+  "description": "AI导航与AI好站精选平台",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

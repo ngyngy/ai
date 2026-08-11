@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <!--
+      Default to the Prezo favicon so prezo.ai / shareprezo.com / localhost
+      tabs never paint the os.new avatar first. The inline script below
+      switches the link to the os.new avatar for non-prezo hosts. The brief
+      flash trade-off only happens off-prezo now, which is the deprecated
+      branding path. type=image/svg+xml lets the browser prefer the SVG.
+    -->
+    <link rel="icon" id="favicon" type="image/svg+xml" href="/favicon-prezo.svg?v=2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create a personal AI receptionist orb. Let people leave you messages through your voice AI.">
+    <title>Introducing the Orb — The AI Smart Folder</title>
+    <!--
+      Sync the title and favicon to the right brand before Vue boots. Without
+      this the browser briefly shows the static <title> while the JS bundle
+      loads and App.vue's onMounted runs. Hostname check is duplicated from
+      src/utils/isPrezoMigrationHost.ts because this script must run before
+      any module imports.
+    -->
+    <script>
+      (function () {
+        var h = window.location.hostname;
+        var isPrezo = h.endsWith('prezo.ai') || h.endsWith('shareprezo.com') || h === 'localhost';
+        if (isPrezo) {
+          document.title = 'Create presentations, docs and websites with AI | Prezo';
+        } else {
+          var favicon = document.getElementById('favicon');
+          if (favicon) {
+            favicon.removeAttribute('type');
+            favicon.setAttribute('href', '/avatar_small.png?v=2');
+          }
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Arabic:wght@100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Sans+Hebrew:wght@100..900&family=Literata:ital,wght@0,200..900;1,200..900&family=Geist+Sans:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/index-B4qIzzmo.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D3IpblTi.css">
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
