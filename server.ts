@@ -270,7 +270,6 @@ function renderToolPage(link: any) {
   <header class="header">
     <div class="header-inner">
       <a href="/" class="header-logo">
-        <img src="/icons/logo-img.png" alt="AI导航" class="header-logo-svg" height="40">
         <span class="header-logo-text" data-i18n="site.name">AI导航</span>
       </a>
       <nav class="header-nav">

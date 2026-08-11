@@ -232,10 +232,7 @@ function applySiteSettings(settings) {
     var domainEl = document.querySelector('.header-logo-domain');
     if (domainEl) domainEl.textContent = settings.site_domain;
   }
-  if (settings.site_logo) {
-    var logoImg = document.querySelector('.header-logo-svg');
-    if (logoImg) logoImg.src = settings.site_logo;
-  }
+  
 
   // Header 导航栏 — 使用 tCat 翻译标签
   if (settings.header_nav) {
