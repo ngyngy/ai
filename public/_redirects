@@ -1,0 +1,4 @@
+/api/categories /data/categories.json 200
+/api/links /data/links.json 200
+/api/site-settings /data/site-settings.json 200
+/tool/:slug /tool/:slug.html 200

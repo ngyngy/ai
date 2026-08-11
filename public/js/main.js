@@ -183,27 +183,42 @@ document.getElementById('sidebarToggle').addEventListener('click', function() {
 overlay.addEventListener('click', closeSidebar);
 
 // ========== Load ==========
+async function smartFetchJson(apiUrl, staticUrl) {
+  try {
+    var res = await fetch(apiUrl);
+    if (res.ok) {
+      var contentType = res.headers.get('content-type') || '';
+      if (contentType.indexOf('application/json') !== -1) {
+        return await res.json();
+      }
+    }
+  } catch (e) {
+    console.warn('API fetch failed, falling back to static JSON:', apiUrl, e);
+  }
+  var resStatic = await fetch(staticUrl);
+  return await resStatic.json();
+}
+
 async function loadData() {
   try {
     var results = await Promise.all([
-      fetch('/api/categories'),
-      fetch('/api/links'),
-      fetch('/api/site-settings')
+      smartFetchJson('/api/categories', '/data/categories.json'),
+      smartFetchJson('/api/links', '/data/links.json'),
+      smartFetchJson('/api/site-settings', '/data/site-settings.json')
     ]);
-    allCategories = await results[0].json();
-    allLinks = await results[1].json();
-    var settings = await results[2].json();
+    allCategories = results[0];
+    allLinks = results[1];
+    var settings = results[2];
     currentSettings = settings;
-
     var fc = document.getElementById('footerCount');
     if (fc) fc.textContent = allLinks.length;
-
     // 应用站点设置（含 header nav with translations）
     applySiteSettings(settings);
-
     renderSidebar();
     renderAll();
-  } catch (e) { console.error(e); }
+  } catch (e) {
+    console.error('Failed to load data:', e);
+  }
 }
 
 function applySiteSettings(settings) {
@@ -574,7 +589,7 @@ document.addEventListener('langchange', function() {
   // 加载分类下拉
   var catSelect = document.getElementById('submitCategory');
   var submitCats = [];
-  fetch('/api/categories').then(function(r) { return r.json(); }).then(function(cats) {
+  smartFetchJson('/api/categories', '/data/categories.json').then(function(cats) {
     submitCats = cats;
     var html = '<option value="">' + I18N.t('submit.select_cat') + '</option>';
     cats.forEach(function(c) { html += '<option value="' + c.id + '">' + escapeHtml(I18N.tCat(c.name)) + '</option>'; });

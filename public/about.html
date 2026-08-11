@@ -437,8 +437,19 @@ var _hmt = _hmt || [];
 var aboutSettings = null;
 (async function() {
   try {
-    var resp = await fetch('/api/site-settings');
-    aboutSettings = await resp.json();
+    var resp;
+    try {
+      var r = await fetch('/api/site-settings');
+      if (r.ok && (r.headers.get('content-type') || '').indexOf('application/json') !== -1) {
+        resp = await r.json();
+      } else {
+        throw new Error('Not JSON');
+      }
+    } catch (err) {
+      var rStatic = await fetch('/data/site-settings.json');
+      resp = await rStatic.json();
+    }
+    aboutSettings = resp;
     renderAboutContent();
   } catch (e) {
     console.error('加载关于内容失败:', e);
