@@ -5047,5 +5047,22 @@
     "slug": "marvis",
     "detail_content": "{\"blocks\":[{\"type\":\"intro\",\"title\":\"Marvis — 简介\",\"content\":\"Marvis 是Marvis马维斯是腾讯最新推出的操作系统层级AI助手——真正理解你的每一份文件，使用deepseek v4、混元hunyuan3/hy3等最新模型。支持本地文档与图片AI搜索，APK与EXE应用一句话调用，跨PC、手机、微信多端在线。自然语言控制电脑设置，支持本地大模型本地模式（机器学习驱动），敏感文件不上云。安全又强大，是一款全能AI工具，做你的全端私人AI助手。\\n\\n它为用户提供了优秀的用户体验和高效的解决方案，在 marvis.qq.com 提供在线服务。\"},{\"type\":\"features\",\"title\":\"核心特色\",\"items\":[\"高效便捷：快速完成目标任务\",\"用户体验优秀：简洁直观的操作界面\",\"持续更新：产品迭代活跃功能不断进化\",\"广泛适用：覆盖多种使用场景\"]},{\"type\":\"scenarios\",\"title\":\"典型应用场景\",\"items\":[\"日常办公效率提升\",\"学习辅导与知识获取\",\"多语言交流与翻译\",\"信息检索与知识整理\"]},{\"type\":\"pricing\",\"title\":\"收费模式\",\"items\":[{\"name\":\"免费版\",\"price\":\"¥0\",\"desc\":\"基础功能免费使用\"},{\"name\":\"付费版\",\"price\":\"按需\",\"desc\":\"高级功能/商业授权\"}]},{\"type\":\"tips\",\"title\":\"使用技巧\",\"items\":[\"首次使用建议查看官方文档或教程\",\"结合具体场景需求进行针对性操作\",\"关注官方动态及时获取新功能\"]}]}",
     "category_name": "⚡ 龙虾与Agent"
+  },
+  {
+    "id": 381,
+    "category_id": 44,
+    "title": "agent-qa",
+    "url": "https://vostride.com",
+    "description": "开源的 Web 与移动端自然语言测试 CLI，具备 memidex 持久记忆、经验证的自我改进能力和可审查的测试证据。CLI 免费，模型与基础设施费用另计。",
+    "icon_url": "https://vostride.com/icon.png",
+    "tags": "CLI 自然语言测试 memidex MCP",
+    "sort_order": 16,
+    "is_hot": 0,
+    "is_recommended": 0,
+    "created_at": "2026-11-01 20:56:49",
+    "updated_at": "2026-11-01 20:56:49",
+    "slug": "agent-qa",
+    "detail_content": "",
+    "category_name": "💻 AI编程开发"
   }
 ]
